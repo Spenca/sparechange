@@ -2,8 +2,22 @@
 {% load staticfiles %}
 
 {% block title %}
-Main
+Spare Change
 {% endblock %}
 
 {% block body %}
+    <div class="container graybg">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset>
+            <legend>Add an image file</legend>
+                <table class="table-condensed">
+                    <thead>
+                    {{upload_form}}
+                    </thead>
+                </table>
+                <input class="btn btn-primary btn-sm" type="submit" name="create" value="Create">   
+            </fieldset>
+        </form><br>
+    </div>
 {% endblock %}
