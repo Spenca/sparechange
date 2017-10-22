@@ -7,10 +7,22 @@ Spare Change
 
 {% block body %}
     <div class="container graybg">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Enter a URL</legend>
+                <table class="table-condensed">
+                    <thead>
+                    {{text_form}}
+                    </thead>
+                </table>
+                <input class="btn btn-primary btn-sm" type="submit" name="" value="Create">
+            </fieldset>
+        </form><br>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset>
-            <legend>Add an image file</legend>
+            <legend>Or, add an image file</legend>
                 <table class="table-condensed">
                     <thead>
                     {{upload_form}}
