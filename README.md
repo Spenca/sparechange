@@ -1,2 +1,2 @@
-# dubhacks2017
+# sparechange
 Project repository for DubHacks 2017.
